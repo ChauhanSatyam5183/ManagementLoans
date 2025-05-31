@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan Management Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Loan Management Dashboard</h1>
+
+    <section>
+      <h2>Create Customer</h2>
+      <input id="custName" placeholder="Name" />
+      <input id="custEmail" placeholder="Email" />
+      <input id="custPhone" placeholder="Phone Number" />
+      <input id="custAddress" placeholder="Address" />
+      <button onclick="createCustomer()">Create</button>
+      <p id="custResponse"></p>
+    </section>
+
+    <section>
+      <h2>Apply for Loan</h2>
+      <input id="loanCustomerId" placeholder="Customer ID" />
+      <input id="loanType" placeholder="Loan Type (e.g. HOME, CAR)" />
+      <input id="loanAmount" placeholder="Amount" />
+      <input id="loanInterest" placeholder="Interest Rate" />
+      <button onclick="applyLoan()">Apply</button>
+      <p id="loanResponse"></p>
+    </section>
+
+    <section>
+      <h2>Get All Loans</h2>
+      <button onclick="getLoans()">Fetch Loans</button>
+      <pre id="loanList"></pre>
+    </section>
+
+    <section>
+      <h2>Update Loan Status</h2>
+      <input id="updateLoanId" placeholder="Loan ID" />
+      <input id="updateStatus" placeholder="New Status (Approved/Rejected/Pending)" />
+      <button onclick="updateLoanStatus()">Update</button>
+      <p id="updateResponse"></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
